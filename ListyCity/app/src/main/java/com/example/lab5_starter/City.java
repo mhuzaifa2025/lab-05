@@ -2,14 +2,14 @@ package com.example.lab5_starter;
 
 import java.io.Serializable;
 
-// Movie object
+
 public class City implements Serializable {
 
-    // attributes
+
     private String name;
     private String province;
 
-    // constructor
+
     public City(String name, String province) {
         this.name = name;
         this.province = province;

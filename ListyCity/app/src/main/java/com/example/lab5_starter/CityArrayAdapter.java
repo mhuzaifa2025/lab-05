@@ -23,6 +23,7 @@ public class CityArrayAdapter extends ArrayAdapter<City> {
     }
 
     @NonNull
+    @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
         View view = convertView;
         if (view == null){
@@ -30,11 +31,12 @@ public class CityArrayAdapter extends ArrayAdapter<City> {
         }
 
         City city = cities.get(position);
-        TextView movieName = view.findViewById(R.id.textCityName);
-        TextView movieYear = view.findViewById(R.id.textCityProvince);
 
-        movieName.setText(city.getName());
-        movieYear.setText(city.getProvince());
+        TextView cityName = view.findViewById(R.id.textCityName);
+        TextView provinceName = view.findViewById(R.id.textCityProvince);
+
+        cityName.setText(city.getName());
+        provinceName.setText(city.getProvince());
 
         return view;
     }
